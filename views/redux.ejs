@@ -15,5 +15,8 @@
         Your Quote: <input type='textarea' name='quote' style="width: 300px; height:100px"><br>
         <input type='submit' value='Submit'>
     </form>
+    <% if(typeof err == 'object' && err) { %>
+        <%= err %>
+    <% } %>
 </body>
 </html>

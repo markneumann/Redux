@@ -42,6 +42,7 @@ app.get('/quotes', function(req, res) {
     Quote.find({}, function(err, quotes) {
         if(err){
             console.log(err);
+            res.render("redux", {err: err});
         } else {
             console.log(quotes);
             res.render("quotes", {quotes: quotes});
@@ -63,6 +64,7 @@ app.post('/quotes', function(req, res) {
         // if there is an error console.log that something went wrong!
         if (err) {
             console.log('something went wrong');
+            res.render("redux", {err: err});
         } else { // else console.log that we did well and then redirect to the root route
             console.log('successfully added a quote!');
             res.redirect('/quotes');
