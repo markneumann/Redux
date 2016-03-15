@@ -1,0 +1,19 @@
+<!-- index.ejs for Quoting Dojo Redux -->
+<html>
+<head>
+ <title>Quotes So Far</title>
+
+</head>
+<body>
+
+    <h2>Here are some Awesome Quotes</h2>
+    <div id= "data">
+        <%for(each in quotes) {%>
+            "<%= quotes[each].quote %>""<p>
+            - <%= quotes[each].name %> at <%= quotes[each].when %><br>
+            <hr>
+        <%} %>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!-- index.ejs for Quoting Dojo Redux -->
+<html>
+<head>
+ <title>Quote Entry</title>
+
+</head>
+<body>
+    <p id="timestamp"></p>
+    <script>
+    document.getElementById("timestamp").innerHTML = Date();
+    </script>
+    <h3>Add a User!</h3>
+    <form action='/quotes' method='post'>
+        Your Name: <input type='text' name='name'><br>
+        Your Quote: <input type='textarea' name='quote' style="width: 300px; height:100px"><br>
+        <input type='submit' value='Submit'>
+    </form>
+</body>
+</html>

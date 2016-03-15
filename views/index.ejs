@@ -1,0 +1,28 @@
+<!-- //In your index.ejs view file you should have a form that sends a user's name and age to the '/users' route. -->
+<html>
+<head>
+ <title>basic mongoose</title>
+ 
+</head>
+<body>
+    <p id="timestamp"></p>
+    <script>
+    document.getElementById("timestamp").innerHTML = Date();
+    </script>
+    <h3>List of Users</h3>
+    <div id= "data">
+        <table>
+            <tr><td>Name</td><td>Age</td></tr>
+            <%for(each in users) {%>
+                <tr><td><%= users[each].name %></td><td><%= users[each].age %></tr>
+            <%} %>
+    </table>
+    </div>
+    <h3>Add a User!</h3>
+    <form action='/users' method='post'>
+        Your Name: <input type='text' name='name'><br>
+        Your Age: <input type='number' name='age'><br>
+        <input type='submit' value='Submit'>
+    </form>
+</body>
+</html>
